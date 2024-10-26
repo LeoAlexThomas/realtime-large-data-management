@@ -3,22 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "cross-env ENV=dev next dev",
+    "build": "cross-env ENV=dev next build",
+    "start": "cross-env ENV=dev next start",
+    "prod-build": "cross-env ENV=prod next build",
+    "prod-start": "cross-env ENV=prod next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/core": "^7.13.4",
+    "@mantine/hooks": "^7.13.4",
+    "@types/lodash": "^4.17.12",
+    "axios": "^1.7.7",
+    "cross-env": "^7.0.3",
+    "lodash": "^4.17.21",
+    "next": "15.0.1",
+    "nookies": "^2.5.2",
     "react": "19.0.0-rc-69d4b800-20241021",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "19.0.0-rc-69d4b800-20241021",
-    "next": "15.0.1"
+    "swr": "^2.2.5"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "15.0.1"
+    "eslint-config-next": "15.0.1",
+    "typescript": "^5"
   }
 }
