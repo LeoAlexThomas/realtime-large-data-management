@@ -1,4 +1,5 @@
 import api from "@/components/api";
+import UserDataProvider from "@/contexts/UserData";
 import "@/styles/globals.css";
 import theme from "@/theme";
 import { MantineProvider } from "@mantine/core";
@@ -14,7 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
           refreshInterval: 5000,
         }}
       >
-        <Component {...pageProps} />
+        <UserDataProvider>
+          <Component {...pageProps} />
+        </UserDataProvider>
       </SWRConfig>
     </MantineProvider>
   );
