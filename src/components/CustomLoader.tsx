@@ -2,7 +2,7 @@ import { Center, Loader } from "@mantine/core";
 
 const CustomLoader = () => {
   return (
-    <Center>
+    <Center h="100vh">
       <Loader />
     </Center>
   );

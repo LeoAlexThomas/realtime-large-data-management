@@ -29,7 +29,7 @@ const api = (url: string, config?: any, baseurl?: string) => {
       if (!Boolean(res)) {
         return null;
       }
-      if (requestHeader["content-type"].startWith("application/json")) {
+      if (requestHeader["content-type"]?.startWith("application/json")) {
         return JSON.parse(res);
       }
       return res;

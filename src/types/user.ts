@@ -10,3 +10,8 @@ export interface UserInterface {
   email: string;
   role: UserRoleEnum;
 }
+
+export interface UserLoginInterface {
+  email: string;
+  password: string;
+}
